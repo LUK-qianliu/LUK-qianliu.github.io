@@ -1,9 +1,9 @@
 [
     {
-        "ref": "https://LUK-qianliu.github.io/blog/test/",
-        "title": "Emoji Support",
+        "ref": "https://LUK-qianliu.github.io/blog/blog1/",
+        "title": "hugo+github搭建自己的博客",
         "section": "blog",
         "date" : "2019.03.05",
-        "body": "this is test blog\n"
+        "body": " 1.下载hugo 下载：Releases · gohugoio/hugo · GitHub 例如：window用户就直接下载hugo_0.55.6_Windows-64bit.zip版本\n2.部署hugo本地站点 更新博客以后生成public文件的命令：hugo \u0026ndash;theme=pulp \u0026ndash;baseUrl=\u0026ldquo;https://LUK-qianliu.github.io/\u0026quot;\n"
     }
 ]
