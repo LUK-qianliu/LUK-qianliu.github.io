@@ -36,7 +36,7 @@
 
 <meta itemprop="datePublished" content="2019-03-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="717">
+<meta itemprop="wordCount" content="808">
 
 
 
@@ -79,8 +79,9 @@
 <h1 id="1-下载hugo">1.下载hugo</h1>
 
 <p>（1）下载：<a href="https://github.com/gohugoio/hugo/releases">Releases · gohugoio/hugo · GitHub</a>
-例如：window用户就直接下载hugo_0.55.6_Windows-64bit.zip版本
-（2）解压到bin目录以后，生成一个exe文件，其实就是hugo命令包，将此包所在目录配置到path环境中。
+例如：window用户就直接下载hugo_0.55.6_Windows-64bit.zip版本</p>
+
+<p>（2）解压到bin目录以后，生成一个exe文件，其实就是hugo命令包，将此包所在目录配置到path环境中。
 使用下面的命令如果出现版本号，说明配置成功：</p>
 
 <pre><code class="language-shell">hugo version
@@ -177,17 +178,25 @@ hasCJKLanguage = true
     weight =60
 </code></pre>
 
-<h1 id="3-github与本地仓库关联">3.github与本地仓库关联</h1>
+<h1 id="3-本地测试">3.本地测试</h1>
 
-<p>（1）更新博客以后生成public文件的命令：</p>
+<p>本地启动hugo站点</p>
+
+<pre><code class="language-shell">hugo server -t pulp # 以pulp为主题启动站点 
+</code></pre>
+
+<p>本地测试，直接访问：<a href="http://localhost:1313/">http://localhost:1313/</a>.</p>
+
+<h1 id="4-github与本地仓库关联">4.github与本地仓库关联</h1>
+
+<p>（1）利用现有的markdown文本生成一个public文件，该public文件是一个网页展示文件：</p>
 
 <pre><code class="language-shell">hugo --theme=pulp --baseUrl=&quot;https://LUK-qianliu.github.io/&quot; -D
 </code></pre>
 
 <p>（2）然后将生成的public文件上传到github即可</p>
 
-<pre><code class="language-shell">git init
-git add .
+<pre><code class="language-shell">git add *
 git commit -m &quot;Initial commit.&quot;
 git remote add origin https://github.com/LUK-qianliu/LUK-qianliu.github.io
 git push -u origin master
