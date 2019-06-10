@@ -36,7 +36,7 @@
 
 <meta itemprop="datePublished" content="2019-03-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="653">
+<meta itemprop="wordCount" content="717">
 
 
 
@@ -100,7 +100,8 @@ git init
 git clone https://github.com/koirand/pulp.git themes/pulp # 下载主题pulp
 cd themes
 git init # 将主题所在目录也当作一个git仓库使用，用户以后上传文件public与github仓库之间的管理
-git submodule add xxx.git themes/pulp # 主题使用了pulp初始化站点
+cd ../
+git submodule add xxx.git themes/pulp # 主题使用了pulp初始化站点，xxx.git就是你的仓库的全部url(如:https://github账号.仓库名.git )
 </code></pre>
 
 <p>你的配置文件<code>config.toml</code>：</p>
@@ -178,14 +179,19 @@ hasCJKLanguage = true
 
 <h1 id="3-github与本地仓库关联">3.github与本地仓库关联</h1>
 
-<h1 id="4-更新博客">4.更新博客</h1>
-
 <p>（1）更新博客以后生成public文件的命令：</p>
 
 <pre><code class="language-shell">hugo --theme=pulp --baseUrl=&quot;https://LUK-qianliu.github.io/&quot; -D
 </code></pre>
 
 <p>（2）然后将生成的public文件上传到github即可</p>
+
+<pre><code class="language-shell">git init
+git add .
+git commit -m &quot;Initial commit.&quot;
+git remote add origin https://github.com/LUK-qianliu/LUK-qianliu.github.io
+git push -u origin master
+</code></pre>
 
   </div>
   <footer>
